@@ -1,0 +1,56 @@
+.container-center{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: black;
+    height: 100vh;
+}
+
+.tela-form{
+    width: 53%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tela-form img{
+    width: 400px;
+    border-radius: 4px;
+    margin-bottom: 3px;
+}
+
+.tela-form form{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo h1{
+    text-align: center;
+    margin-bottom: 1rem;
+    color: white;
+    width: 100%;
+}
+
+.tela-form input{
+    margin-bottom: 1rem;
+    height: 20px;
+    border-radius: 4px;
+    border: 0;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #FFF;
+}
+
+form button{
+    height: 35px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #FFF;
+    color: black;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-top: 5px;
+}
