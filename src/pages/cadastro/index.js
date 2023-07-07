@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./login.css";
-import rockstar from "../assets/rockstar.png";
+import rockstar from "../../assets/rockstar.png";
 import { Link } from "react-router-dom";
 
-export default function Login() {
+export default function Cadatro() {
+  const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
@@ -11,7 +11,7 @@ export default function Login() {
     e.preventDefault();
 
     if (email !== "" && senha !== "") {
-      console.log("email:" + email + "\nsenha:" + senha);
+      console.log("nome:" + nome + "\nemail:" + email + "\nsenha:" + senha);
       alert("Cadastrado");
     } else {
       alert("Preencha todos os campos");
@@ -25,25 +25,30 @@ export default function Login() {
           <img src={rockstar} />
         </div>
 
-        <form>
-          <input 
+        <form onSubmit={handleAcessar}>
+          <input
+            type="text"
+            placeholder="seu nome"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+          />
+          <input
             type="text"
             placeholder="seu email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <input 
+          <input
             type="password"
             placeholder="senha"
             value={senha}
-            onChange={(e) => senha(e.target.value)}
+            onChange={(e) => setSenha(e.target.value)}
           />
-          <input 
-          type="submit" 
-          value="entrar">
-          </input>
+          <input type="submit" value="entrar"></input>
         </form>
-        <h3>Ainda nao  tem uma conta ? <Link>Cadastre-se</Link></h3>
+        <h3>
+          Já tem uma conta ? <Link to="/">Faça login</Link>
+        </h3>
       </div>
     </div>
   );

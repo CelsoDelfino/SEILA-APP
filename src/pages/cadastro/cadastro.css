@@ -14,7 +14,7 @@ body{
 .login{
     background-color: #181920;
     width: 355px;
-    height: 320px;
+    height: 350px;
     padding: 35px;
     display: flex;
     flex-direction: column;
@@ -71,4 +71,5 @@ a{
 h3{
     font-size: 17px;
     color: #5568F2;
+    margin-top: 30px;
 }
