@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./login.css";
 import logoproj from "../assets/logoproj.png";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -44,6 +45,7 @@ export default function Login() {
             onChange={(e) => setSenha(e.target.value)}
           />
           <button type="submit">Entrar</button>
+          <Link to="/">Para recrutadores</Link>
         </form>
       </div>
     </div>
